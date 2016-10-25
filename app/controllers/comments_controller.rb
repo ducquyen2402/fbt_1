@@ -24,12 +24,12 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    autherize @comment
     if params[:comment_id]
       @comment = Comment.find_by id: params[:comment_id]
     else
       @comment = Comment.find_by id: params[:id]
     end
+    authorize @comment
     flash.now[:danger] = t "comment.not_axist" if @comment.nil?
     if @comment.destroy
       flash[:success] = t "comment.destroyed_success"
