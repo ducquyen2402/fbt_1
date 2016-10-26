@@ -19,6 +19,8 @@
 //= require script
 //= require jquery.fitvids
 //= require modernizr.min
+//= require jquery.raty
+//= require ratyrate
 
 $('span.menu').click(function() {
   $('ul.res').slideToggle( 300, function() {

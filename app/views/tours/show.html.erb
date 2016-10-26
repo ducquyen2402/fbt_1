@@ -6,6 +6,8 @@
       </div>
       <div class="lone-line">
         <h4><%= @tour.name %></h4>
+        <%= rating_for @tour, "quality", half_show: true,
+          star_path: "/images/ratyrate" %>
         <ul class="grid-blog">
           <h3>
             <li><span><i class="glyphicon glyphicon-time">

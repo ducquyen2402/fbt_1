@@ -9,8 +9,9 @@ Rails.application.routes.draw do
     controllers: {omniauth_callbacks: :"omniauth_callbacks#create" }
 
   resources :tours, only: [:index, :show] do
-    resources :bookings 
+    resources :bookings
     post "bookings/:id" => "bookings#show"
   end
   resources :places, only: [:index, :show]
+  post "/rate" => "rater#create", :as => "rate"
 end

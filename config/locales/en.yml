@@ -75,6 +75,9 @@ en:
   tour:
     not_found: "tour not found"
     price: "Price "
+  rating:
+    rating: "Rating: "
+    votes: " votes"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
