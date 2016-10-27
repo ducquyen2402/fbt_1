@@ -16,6 +16,8 @@
             </li>
           </h3>
         </ul>
+        <%= rating_for @tour, "quality", half_show: true,
+          star_path: "/images/ratyrate" %>
         <p class="wow fadeInLeft animated" data-wow-delay=".5s">
           <h5>
             <span><%= @tour.description.html_safe %></span>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   mount Ckeditor::Engine => "/ckeditor"
   resources :reviews
   resources :categories, only: :show
